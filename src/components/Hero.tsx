@@ -51,7 +51,7 @@ export function Hero() {
               <span className="text-gradient-blue"> Ácaros</span>?
               <br />
               <span className="text-2xl md:text-3xl lg:text-4xl text-accent font-semibold block mt-3">
-                ✨ Deixe com NOSOTROS! Recupere HOJE!
+                ✨ Deixe conosco! Recupere HOJE!
               </span>
             </motion.h1>
 
