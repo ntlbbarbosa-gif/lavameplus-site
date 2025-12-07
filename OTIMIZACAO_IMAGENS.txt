@@ -1,0 +1,92 @@
+📊 OTIMIZAÇÃO DE IMAGENS - LAVAMEPLUS
+=====================================
+
+✅ LAZY LOADING IMPLEMENTADO
+
+Componentes atualizados com loading="lazy":
+- ✅ Hero.tsx (imagem principal do sofá)
+- ✅ Depoimentos.tsx (avatares dos clientes)
+- ✅ AntesDepois.tsx (comparações antes/depois)
+
+IMPACTO ESPERADO:
+- 🟢 -20% no tempo de carregamento inicial
+- 🟢 Melhora LCP (Largest Contentful Paint)
+- 🟢 Melhor score no Lighthouse
+- 🟢 Menos uso de banda em primeira visita
+
+
+📈 PRÓXIMAS OTIMIZAÇÕES RECOMENDADAS
+====================================
+
+1. CONVERTER PARA WEBP (reduz 25-30% do tamanho)
+   - Usar TinyPNG ou Squoosh
+   - Implementar com fallback para JPG
+
+2. USAR CDN PARA IMAGENS
+   - Vercel Image Optimization (automático se usar Vercel)
+   - Cloudinary (upload customizado)
+   - AWS CloudFront (para escalabilidade)
+
+3. IMPLEMENTAR SRCSET (responsive images)
+   Serve diferentes tamanhos conforme device:
+   - Mobile: 400px width
+   - Tablet: 800px width
+   - Desktop: 1470px width
+
+4. ADICIONAR BLUR PLACEHOLDER
+   Mostra imagem desfocada enquanto carrega (melhor UX)
+
+5. COMPRESSÃO MANUAL
+   Antes: Verificar tamanho real das imagens
+   Depois: Usar ferramenta de compressão
+
+
+🔗 FERRAMENTAS ÚTEIS
+====================
+
+📌 Compressão:
+   - TinyPNG: https://tinypng.com (JPG/PNG)
+   - Squoosh: https://squoosh.app (Google)
+   - WebP Converter: https://convertio.co
+
+📌 Teste Performance:
+   - Google PageSpeed: https://pagespeed.web.dev
+   - GTmetrix: https://gtmetrix.com
+   - Lighthouse: Built-in Chrome DevTools
+
+📌 CDN Gratuito:
+   - Vercel: Se hospedar lá (automático)
+   - Cloudinary: Free tier para até 25GB
+   - Imgix: 25GB/mês grátis
+
+
+⚡ COMANDOS ÚTEIS
+==================
+
+Se usar Next.js (recomendado):
+npm install next-image-export-optimizer
+
+Se usar apenas React + Vite:
+npm install vite-plugin-image-optimization
+
+
+💡 DICA IMPORTANTE
+===================
+
+Seu site usa Unsplash para imagens de exemplo.
+Para produção, recomendo:
+
+1. Fazer download das imagens
+2. Compactar com TinyPNG/Squoosh
+3. Converter para WebP
+4. Fazer upload para CDN (Cloudinary/Vercel)
+5. Atualizar URLs no código
+
+
+✅ STATUS ATUAL
+===============
+Lazy Loading: ✅ IMPLEMENTADO
+WebP: ⏳ Próximo passo
+CDN: ⏳ Próximo passo
+Srcset: ⏳ Próximo passo
+Placeholder Blur: ⏳ Próximo passo

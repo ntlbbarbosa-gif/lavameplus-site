@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Blue, White & Coral Design System */
+    --background: 210 40% 98%;
+    --foreground: 215 50% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 50% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 50% 15%;
+
+    /* Deep Blue Primary */
+    --primary: 215 90% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 215 85% 55%;
+    --primary-dark: 215 95% 25%;
+
+    /* Coral Accent */
+    --accent: 16 100% 65%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 16 100% 75%;
+    --accent-dark: 16 100% 50%;
+
+    --secondary: 210 30% 95%;
+    --secondary-foreground: 215 50% 15%;
+
+    --muted: 210 25% 92%;
+    --muted-foreground: 215 20% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 30% 88%;
+    --input: 210 30% 88%;
+    --ring: 215 90% 35%;
+
+    --radius: 0.75rem;
+
+    /* Custom Colors */
+    --coral: 16 100% 65%;
+    --coral-glow: 16 100% 75%;
+    --blue-deep: 215 90% 35%;
+    --blue-light: 215 85% 55%;
+    --blue-dark: 215 95% 20%;
+    
+    /* Gradients */
+    --gradient-coral: linear-gradient(135deg, hsl(16 100% 65%), hsl(16 100% 55%));
+    --gradient-blue: linear-gradient(135deg, hsl(215 90% 35%), hsl(215 95% 25%));
+    --gradient-hero: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(210 35% 95%) 100%);
+    
+    /* Shadows */
+    --shadow-coral: 0 8px 30px -10px hsl(16 100% 65% / 0.5);
+    --shadow-blue: 0 8px 30px -10px hsl(215 90% 35% / 0.4);
+    --shadow-card: 0 4px 20px -5px hsl(215 50% 15% / 0.08);
+    --shadow-card-hover: 0 12px 40px -10px hsl(215 50% 15% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 50% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 50% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 50% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 215 85% 55%;
+    --primary-foreground: 215 95% 10%;
+
+    --accent: 16 100% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --secondary: 215 40% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 40% 18%;
+    --muted-foreground: 210 25% 60%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 40% 20%;
+    --input: 215 40% 20%;
+    --ring: 215 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Manrope', sans-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-xl bg-card/80 border border-border/50;
+  }
+
+  .glass-dark {
+    @apply backdrop-blur-xl bg-blue-deep/90 border border-primary/20;
+  }
+
+  .text-gradient-coral {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--coral)) 0%, hsl(var(--coral-glow)) 100%);
+  }
+
+  .text-gradient-blue {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--blue-light)) 0%, hsl(var(--blue-deep)) 100%);
+  }
+
+  .btn-coral {
+    @apply relative overflow-hidden bg-accent text-accent-foreground font-semibold px-8 py-4 rounded-xl;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:shadow-[0_8px_30px_-10px_hsl(16_100%_65%/0.6)] hover:-translate-y-0.5;
+    @apply active:scale-[0.98];
+  }
+
+  .btn-coral::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-accent-light/0 via-accent-foreground/20 to-accent-light/0;
+    @apply -translate-x-full transition-transform duration-500;
+  }
+
+  .btn-coral:hover::before {
+    @apply translate-x-full;
+  }
+
+  .btn-outline-blue {
+    @apply relative border-2 border-primary text-primary font-semibold px-8 py-4 rounded-xl;
+    @apply bg-transparent transition-all duration-300 ease-out;
+    @apply hover:bg-primary hover:text-primary-foreground hover:-translate-y-0.5;
+  }
+
+  .card-premium {
+    @apply relative bg-card rounded-2xl p-6 border border-border/50;
+    @apply shadow-[var(--shadow-card)] transition-all duration-500 ease-out;
+    @apply hover:shadow-[var(--shadow-card-hover)] hover:-translate-y-1;
+  }
+
+  .card-premium::before {
+    content: '';
+    @apply absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500;
+    background: linear-gradient(135deg, hsl(var(--coral) / 0.05), hsl(var(--blue-light) / 0.05));
+  }
+
+  .card-premium:hover::before {
+    @apply opacity-100;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .pulse-coral {
+    animation: pulse-coral 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse-coral {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsl(16 100% 65% / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 15px hsl(16 100% 65% / 0);
+    }
+  }
+
+  .shine {
+    @apply relative overflow-hidden;
+  }
+
+  .shine::after {
+    content: '';
+    @apply absolute top-0 -left-full w-full h-full;
+    background: linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.2), transparent);
+    animation: shine 3s ease-in-out infinite;
+  }
+
+  @keyframes shine {
+    0% { left: -100%; }
+    50%, 100% { left: 100%; }
+  }
+
+  .parallax-bg {
+    @apply absolute inset-0 -z-10;
+    will-change: transform;
+  }
+
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .glow-coral {
+    @apply relative;
+  }
+
+  .glow-coral::before {
+    content: '';
+    @apply absolute -inset-1 rounded-2xl opacity-30 blur-xl;
+    background: hsl(var(--coral));
+    z-index: -1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
