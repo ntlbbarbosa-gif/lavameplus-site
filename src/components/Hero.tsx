@@ -172,7 +172,7 @@ export function Hero() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1470&auto=format&fit=crop"
+                src="https://res.cloudinary.com/di7wp3ajp/image/upload/v1765122267/images_josrz3.jpg"
                 alt="Sofá limpo e higienizado pela LAVAMEPLUS"
                 loading="lazy"
                 className="w-full h-auto object-cover aspect-[4/3]"
