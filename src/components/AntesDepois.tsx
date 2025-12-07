@@ -15,9 +15,9 @@ const comparisons = [
   {
     id: 2,
     antes:
-      "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=1470&auto=format&fit=crop",
+      "https://res.cloudinary.com/di7wp3ajp/image/upload/v1765127361/limpeza-de-sofa-no-analia-franco-2_orf4ix.jpg",
     depois:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1470&auto=format&fit=crop",
+      "https://res.cloudinary.com/di7wp3ajp/image/upload/v1765127361/limpeza-de-sofa-no-analia-franco-2_orf4ix.jpg",
     titulo: "Sofá Retrátil",
   },
   {
@@ -191,6 +191,7 @@ export function AntesDepois() {
     </section>
   );
 }
+
 
 
 
