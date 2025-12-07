@@ -95,7 +95,7 @@ export function AntesDepois() {
                 src={current.antes}
                 alt={`${current.titulo} - Antes`}
                 loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover saturate-50 contrast-90"
               />
 
               {/* After Image Overlay */}
@@ -107,7 +107,7 @@ export function AntesDepois() {
                   src={current.depois}
                   alt={`${current.titulo} - Depois`}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover saturate-125 brightness-110"
                   style={{
                     width: `${(100 / sliderPosition) * 100}%`,
                     maxWidth: "none",
@@ -191,4 +191,5 @@ export function AntesDepois() {
     </section>
   );
 }
+
 
