@@ -1,3 +1,4 @@
+import { ScarcityTimer } from "./ScarcityTimer";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles, Clock, CheckCircle, TrendingUp, Zap } from "lucide-react";
 
@@ -238,3 +239,5 @@ export function Hero() {
     </section>
   );
 }
+
+
