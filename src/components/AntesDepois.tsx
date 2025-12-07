@@ -7,9 +7,9 @@ const comparisons = [
   {
     id: 1,
     antes:
-      "https://images.unsplash.com/photo-1581597221446-8c4b77f7218d?q=80&w=1470&auto=format&fit=crop",
+      "https://res.cloudinary.com/di7wp3ajp/image/upload/v1765125140/lavagem-de-sofa-antes-e-depois_efa8pf.jpg",
     depois:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1470&auto=format&fit=crop",
+      "https://res.cloudinary.com/di7wp3ajp/image/upload/v1765125140/lavagem-de-sofa-antes-e-depois_efa8pf.jpg",
     titulo: "Sofá de Tecido",
   },
   {
@@ -191,3 +191,4 @@ export function AntesDepois() {
     </section>
   );
 }
+
