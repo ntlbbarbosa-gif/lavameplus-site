@@ -23,9 +23,9 @@ const comparisons = [
   {
     id: 3,
     antes:
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=1470&auto=format&fit=crop",
+      "https://res.cloudinary.com/di7wp3ajp/image/upload/v1765125766/138e64b4c93cb1c16565888e19f0d311_wfjibl.jpg",
     depois:
-      "https://images.unsplash.com/photo-1540932239986-310128078e6c?q=80&w=1470&auto=format&fit=crop",
+      "https://res.cloudinary.com/di7wp3ajp/image/upload/v1765125766/138e64b4c93cb1c16565888e19f0d311_wfjibl.jpg",
     titulo: "Colchão",
   },
 ];
@@ -191,5 +191,6 @@ export function AntesDepois() {
     </section>
   );
 }
+
 
 
