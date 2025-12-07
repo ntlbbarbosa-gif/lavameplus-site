@@ -1,3 +1,4 @@
+import { ScarcityTimer } from '../components/ScarcityTimer';
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { ProblemasSolucoes } from "@/components/ProblemasSolucoes";
@@ -15,6 +16,7 @@ import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <ScarcityTimer />
       <Header />
       <main>
         <Hero />
